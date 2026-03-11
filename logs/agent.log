@@ -1,0 +1,1411 @@
+2026-03-09 21:15:23,298 - root - INFO - ==================================================
+2026-03-09 21:15:23,298 - root - INFO - 日志系统已启动
+2026-03-09 21:15:23,298 - root - INFO - 日志级别: INFO
+2026-03-09 21:15:23,298 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 21:15:23,298 - root - INFO - ==================================================
+2026-03-09 21:15:24,703 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 21:15:24,703 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 21:15:24,703 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 21:15:25,073 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 21:15:25,087 - __main__ - INFO - 🔧 LLM 配置: local 模式
+2026-03-09 21:15:25,545 - __main__ - INFO - ==================================================
+2026-03-09 21:15:25,545 - __main__ - INFO - 销售对话开始
+2026-03-09 21:15:25,545 - __main__ - INFO - ==================================================
+2026-03-09 21:15:25,545 - __main__ - INFO - 初始状态: opening
+2026-03-09 21:15:25,545 - __main__ - INFO - 初始上下文: {"state":"opening"}
+2026-03-09 21:15:25,547 - __main__ - INFO - 
+--- 第 1 轮对话 (当前状态: opening) ---
+2026-03-09 21:15:30,663 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:15:34,061 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:15:34,084 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 21:15:35,834 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:15:45,026 - __main__ - INFO - 用户输入: 你讲
+2026-03-09 21:15:46,013 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:15:49,804 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:15:49,810 - __main__ - INFO - 状态转换（规则驱动）: ask_intent
+2026-03-09 21:15:49,810 - __main__ - INFO - 
+--- 第 2 轮对话 (当前状态: ask_intent) ---
+2026-03-09 21:15:50,292 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:15:50,297 - __main__ - INFO - Sales Agent 输出: 您近期有购车打算吗？
+2026-03-09 21:15:51,015 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:16:08,806 - __main__ - INFO - 用户输入: 不确定，看有没有合适的
+2026-03-09 21:16:11,614 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:16:13,219 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:16:16,379 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:16:16,380 - __main__ - INFO - 状态转换（LLM 驱动）: ask_brand_budget - 原因: 用户表达了不确定但愿意了解是否有合适车型的意向，符合进入ask_brand_budget环节的条件
+2026-03-09 21:16:16,380 - __main__ - INFO - 
+--- 第 3 轮对话 (当前状态: ask_brand_budget) ---
+2026-03-09 21:16:16,747 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:16:17,166 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:16:17,168 - __main__ - INFO - Sales Agent 输出: 可以了解一下您青睐的车品牌和预算范围吗？这样我可以根据您的需求提供一些信息。
+2026-03-09 21:16:21,766 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:16:56,231 - __main__ - INFO - 用户输入: 预算30万以内吧，看能不能买欧系车
+2026-03-09 21:16:57,901 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:17:00,540 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:17:00,540 - __main__ - INFO - 状态转换（规则驱动）: recommend
+2026-03-09 21:17:00,540 - __main__ - INFO - 
+--- 第 4 轮对话 (当前状态: recommend) ---
+2026-03-09 21:17:00,540 - rag.index - INFO - 开始构建向量索引...
+2026-03-09 21:17:00,540 - rag.index - INFO - 开始加载车型数据: D:\PythonProgramming\Aitherpath MLE\car_sales_project\rag\data\car.jsonl
+2026-03-09 21:17:00,540 - rag.index - INFO - 成功加载 12 个车型
+2026-03-09 21:17:01,012 - rag.index - INFO - 📦 使用本地模式: Ollama bge-m3
+2026-03-09 21:17:02,916 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:17:07,511 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 21:17:07,521 - rag.index - INFO - 索引构建完成：12 个车型，向量维度 1024
+2026-03-09 21:17:07,805 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 21:17:07,810 - rag.retriever - INFO - 检索到 3 个车型，相似度: [0.6664755 0.6501374 0.6480581]
+2026-03-09 21:17:08,093 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:17:14,201 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:17:14,203 - __main__ - INFO - Sales Agent 输出: 根据您的预算和偏好，比较合适的有宝马3系和大众朗逸。宝马3系拥有出色的后驱驾驶体验和充沛的动力，而大众朗逸则在底盘和后排空间方面表现出色，维修保养成本也较低。您可以考虑一下，看看哪款车型更符合您的需求。
+2026-03-09 21:17:18,467 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:17:48,998 - __main__ - INFO - 用户输入: 宝马不错，但是我更喜欢奥迪
+2026-03-09 21:17:49,360 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:17:53,277 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:17:54,535 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:17:57,047 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:17:57,050 - __main__ - INFO - 状态转换（LLM 驱动）: ask_concerns - 原因: 用户表达了对奥迪的认可，但并未明确表示兴趣，因此按照规则应进入ask_concerns环节进一步了解其具体顾虑。
+2026-03-09 21:17:57,050 - __main__ - INFO - 
+--- 第 5 轮对话 (当前状态: ask_concerns) ---
+2026-03-09 21:17:58,253 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:17:58,256 - __main__ - INFO - Sales Agent 输出: 明白了，您更偏好奥迪。那么您对奥迪的哪款车型感兴趣呢？或者您在选择过程中还有哪些具体的顾虑呢？这样我可以更好地帮助您。
+2026-03-09 21:17:59,654 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:18:26,907 - __main__ - INFO - 用户输入: 奥迪你们有哪些车，最近是不是降价了
+2026-03-09 21:18:30,266 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:18:31,078 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:18:31,080 - __main__ - INFO - 状态转换（规则驱动）: ask_concerns
+2026-03-09 21:18:31,083 - __main__ - INFO - 
+--- 第 6 轮对话 (当前状态: ask_concerns) ---
+2026-03-09 21:18:32,160 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:18:32,162 - __main__ - INFO - Sales Agent 输出: 明白了，您对奥迪的车型还有一些了解需求，或者对购车有其他具体的顾虑吗？这样我可以针对性地为您解答和提供帮助。
+2026-03-09 21:18:35,470 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:19:24,132 - __main__ - INFO - 用户输入: 奥迪Q5你们卖多少？
+2026-03-09 21:19:27,109 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:19:27,761 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:19:27,768 - __main__ - INFO - 状态转换（规则驱动）: ask_concerns
+2026-03-09 21:19:27,772 - __main__ - INFO - 
+--- 第 7 轮对话 (当前状态: ask_concerns) ---
+2026-03-09 21:19:29,315 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:19:29,317 - __main__ - INFO - Sales Agent 输出: 明白了，奥迪Q5的价格区间大致在28万到38万之间，超过了您预算的上限。您对奥迪Q5感兴趣，但不太确定是否在这个价格范围内？有没有其他具体的需求或顾虑呢？
+2026-03-09 21:19:32,266 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:20:25,809 - __main__ - INFO - 用户输入: 我很喜欢Q5，不知道你们有没有优惠，30万左右能不能拿下？
+2026-03-09 21:20:28,516 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:20:30,509 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:20:30,513 - __main__ - INFO - 状态转换（规则驱动）: ask_concerns
+2026-03-09 21:20:30,513 - __main__ - INFO - 
+--- 第 8 轮对话 (当前状态: ask_concerns) ---
+2026-03-09 21:20:31,802 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:20:31,805 - __main__ - INFO - Sales Agent 输出: 明白了，购车的确需要好好考虑。您提到对奥迪Q5感兴趣，但预算可能有些超出。您还有其他具体需求或顾虑吗？比如空间、配置或安全性方面的需求？
+2026-03-09 21:20:33,670 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:20:58,725 - __main__ - INFO - 用户输入: 比较看重安全性
+2026-03-09 21:20:59,375 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 21:21:02,395 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:21:02,397 - __main__ - INFO - 状态转换（规则驱动）: ask_concerns
+2026-03-09 21:21:02,398 - __main__ - INFO - 
+--- 第 9 轮对话 (当前状态: ask_concerns) ---
+2026-03-09 21:21:03,586 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:21:03,589 - __main__ - INFO - Sales Agent 输出: 明白了，您特别重视安全性。那您在安全性方面具体有哪些考虑？比如有没有特别担心的问题，或者是有其他品牌车型在这方面做得比较好的地方想要了解？
+2026-03-09 21:21:04,505 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:01:09,167 - root - INFO - ==================================================
+2026-03-09 22:01:09,169 - root - INFO - 日志系统已启动
+2026-03-09 22:01:09,170 - root - INFO - 日志级别: INFO
+2026-03-09 22:01:09,170 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 22:01:09,170 - root - INFO - ==================================================
+2026-03-09 22:01:09,395 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 22:01:09,395 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 22:01:09,396 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 22:01:09,425 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 22:01:09,459 - __main__ - INFO - 🔧 LLM 配置: local 模式
+2026-03-09 22:24:39,724 - root - INFO - ==================================================
+2026-03-09 22:24:39,724 - root - INFO - 日志系统已启动
+2026-03-09 22:24:39,726 - root - INFO - 日志级别: INFO
+2026-03-09 22:24:39,726 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 22:24:39,726 - root - INFO - ==================================================
+2026-03-09 22:25:22,982 - root - INFO - ==================================================
+2026-03-09 22:25:22,983 - root - INFO - 日志系统已启动
+2026-03-09 22:25:22,983 - root - INFO - 日志级别: INFO
+2026-03-09 22:25:22,983 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 22:25:22,983 - root - INFO - ==================================================
+2026-03-09 22:25:23,245 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 22:25:23,245 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 22:25:23,246 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 22:25:23,596 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 22:25:23,611 - __main__ - INFO - 🔧 LLM 配置: local 模式
+2026-03-09 22:26:25,595 - root - INFO - ==================================================
+2026-03-09 22:26:25,595 - root - INFO - 日志系统已启动
+2026-03-09 22:26:25,595 - root - INFO - 日志级别: INFO
+2026-03-09 22:26:25,596 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 22:26:25,596 - root - INFO - ==================================================
+2026-03-09 22:26:25,838 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 22:26:25,839 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 22:26:25,839 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 22:26:25,867 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 22:26:25,884 - __main__ - INFO - 🔧 LLM 配置: local 模式
+2026-03-09 22:26:26,704 - __main__ - INFO - ==================================================
+2026-03-09 22:26:26,705 - __main__ - INFO - 销售对话开始
+2026-03-09 22:26:26,705 - __main__ - INFO - ==================================================
+2026-03-09 22:26:26,705 - __main__ - INFO - 初始状态: CallState.OPENING
+2026-03-09 22:26:26,707 - __main__ - INFO - 初始上下文: {"state":"opening"}
+2026-03-09 22:26:26,707 - __main__ - INFO - 
+--- 第 1 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:26:32,317 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:26:33,066 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:26:33,081 - __main__ - ERROR - 对话轮次 1 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:26:33,119 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:29:13,939 - root - INFO - ==================================================
+2026-03-09 22:29:13,939 - root - INFO - 日志系统已启动
+2026-03-09 22:29:13,941 - root - INFO - 日志级别: INFO
+2026-03-09 22:29:13,941 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 22:29:13,941 - root - INFO - ==================================================
+2026-03-09 22:29:14,151 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 22:29:14,151 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 22:29:14,152 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 22:29:14,178 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 22:29:14,187 - __main__ - INFO - [CONFIG] LLM 配置: local 模式
+2026-03-09 22:29:14,938 - __main__ - INFO - ==================================================
+2026-03-09 22:29:14,938 - __main__ - INFO - 销售对话开始
+2026-03-09 22:29:14,938 - __main__ - INFO - ==================================================
+2026-03-09 22:29:14,938 - __main__ - INFO - 初始状态: CallState.OPENING
+2026-03-09 22:29:14,938 - __main__ - INFO - 初始上下文: {"state":"opening"}
+2026-03-09 22:29:14,938 - __main__ - INFO - 
+--- 第 1 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:17,238 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:17,250 - __main__ - ERROR - 对话轮次 1 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:17,255 - __main__ - INFO - 
+--- 第 2 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:17,879 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:17,882 - __main__ - ERROR - 对话轮次 2 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:17,885 - __main__ - INFO - 
+--- 第 3 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:18,460 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:18,462 - __main__ - ERROR - 对话轮次 3 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:18,465 - __main__ - INFO - 
+--- 第 4 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:19,035 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:19,037 - __main__ - ERROR - 对话轮次 4 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:19,039 - __main__ - INFO - 
+--- 第 5 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:19,591 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:19,592 - __main__ - ERROR - 对话轮次 5 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:19,594 - __main__ - INFO - 
+--- 第 6 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:20,157 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:20,159 - __main__ - ERROR - 对话轮次 6 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:20,161 - __main__ - INFO - 
+--- 第 7 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:20,526 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:29:20,740 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:20,743 - __main__ - ERROR - 对话轮次 7 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:20,745 - __main__ - INFO - 
+--- 第 8 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:21,353 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:21,355 - __main__ - ERROR - 对话轮次 8 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:21,356 - __main__ - INFO - 
+--- 第 9 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:21,874 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:21,876 - __main__ - ERROR - 对话轮次 9 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:21,877 - __main__ - INFO - 
+--- 第 10 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:22,461 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:22,463 - __main__ - ERROR - 对话轮次 10 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:22,465 - __main__ - INFO - 
+--- 第 11 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:23,034 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:23,037 - __main__ - ERROR - 对话轮次 11 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:23,039 - __main__ - INFO - 
+--- 第 12 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:23,581 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:23,583 - __main__ - ERROR - 对话轮次 12 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:23,584 - __main__ - INFO - 
+--- 第 13 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:24,171 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:24,174 - __main__ - ERROR - 对话轮次 13 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:24,176 - __main__ - INFO - 
+--- 第 14 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:24,684 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:24,686 - __main__ - ERROR - 对话轮次 14 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:24,687 - __main__ - INFO - 
+--- 第 15 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:25,214 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:25,217 - __main__ - ERROR - 对话轮次 15 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:25,221 - __main__ - INFO - 
+--- 第 16 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:25,537 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:29:25,714 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:25,716 - __main__ - ERROR - 对话轮次 16 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:25,718 - __main__ - INFO - 
+--- 第 17 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:26,337 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:26,339 - __main__ - ERROR - 对话轮次 17 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:26,341 - __main__ - INFO - 
+--- 第 18 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:26,865 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:26,866 - __main__ - ERROR - 对话轮次 18 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:26,868 - __main__ - INFO - 
+--- 第 19 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:27,383 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:27,385 - __main__ - ERROR - 对话轮次 19 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:27,386 - __main__ - INFO - 
+--- 第 20 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:27,909 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:27,911 - __main__ - ERROR - 对话轮次 20 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:27,913 - __main__ - INFO - 
+--- 第 21 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:28,492 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:28,494 - __main__ - ERROR - 对话轮次 21 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:28,496 - __main__ - INFO - 
+--- 第 22 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:28,987 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:28,990 - __main__ - ERROR - 对话轮次 22 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:28,992 - __main__ - INFO - 
+--- 第 23 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:29,590 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:29,593 - __main__ - ERROR - 对话轮次 23 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:29,596 - __main__ - INFO - 
+--- 第 24 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:30,187 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:30,189 - __main__ - ERROR - 对话轮次 24 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:30,191 - __main__ - INFO - 
+--- 第 25 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:30,552 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:29:30,692 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:30,694 - __main__ - ERROR - 对话轮次 25 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:30,696 - __main__ - INFO - 
+--- 第 26 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:31,236 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:31,239 - __main__ - ERROR - 对话轮次 26 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:31,241 - __main__ - INFO - 
+--- 第 27 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:32,040 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:32,043 - __main__ - ERROR - 对话轮次 27 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:32,046 - __main__ - INFO - 
+--- 第 28 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:32,641 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:32,643 - __main__ - ERROR - 对话轮次 28 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:32,645 - __main__ - INFO - 
+--- 第 29 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:33,241 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:33,243 - __main__ - ERROR - 对话轮次 29 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:33,244 - __main__ - INFO - 
+--- 第 30 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:29:33,825 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:29:33,828 - __main__ - ERROR - 对话轮次 30 发生错误: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 342, in run_call
+    print(f"\n🎙️  Sales: {sales_message}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f399' in position 2: illegal multibyte sequence
+2026-03-09 22:29:33,831 - __main__ - WARNING - 对话轮次超过限制 (30)，强制结束
+2026-03-09 22:29:33,831 - __main__ - INFO - ==================================================
+2026-03-09 22:29:33,831 - __main__ - INFO - 销售对话结束
+2026-03-09 22:29:33,832 - __main__ - INFO - ==================================================
+2026-03-09 22:29:33,832 - __main__ - INFO - 最终上下文: {
+  "state": "end"
+}
+2026-03-09 22:29:33,832 - __main__ - INFO - 用户画像: {}
+2026-03-09 22:29:33,959 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:30:51,676 - root - INFO - ==================================================
+2026-03-09 22:30:51,677 - root - INFO - 日志系统已启动
+2026-03-09 22:30:51,678 - root - INFO - 日志级别: INFO
+2026-03-09 22:30:51,678 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 22:30:51,679 - root - INFO - ==================================================
+2026-03-09 22:30:51,931 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 22:30:51,932 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 22:30:51,933 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 22:30:51,974 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 22:30:51,988 - __main__ - INFO - [CONFIG] LLM 配置: local 模式
+2026-03-09 22:30:52,802 - __main__ - INFO - ==================================================
+2026-03-09 22:30:52,802 - __main__ - INFO - 销售对话开始
+2026-03-09 22:30:52,802 - __main__ - INFO - ==================================================
+2026-03-09 22:30:52,802 - __main__ - INFO - 初始状态: CallState.OPENING
+2026-03-09 22:30:52,802 - __main__ - INFO - 初始上下文: {"state":"opening"}
+2026-03-09 22:30:52,802 - __main__ - INFO - 
+--- 第 1 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:54,758 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:54,770 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:30:54,771 - __main__ - ERROR - 对话轮次 1 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:54,773 - __main__ - INFO - 
+--- 第 2 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:55,322 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:55,324 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:30:55,325 - __main__ - ERROR - 对话轮次 2 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:55,326 - __main__ - INFO - 
+--- 第 3 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:55,844 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:55,845 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:30:55,846 - __main__ - ERROR - 对话轮次 3 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:55,847 - __main__ - INFO - 
+--- 第 4 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:56,434 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:56,436 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:30:56,437 - __main__ - ERROR - 对话轮次 4 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:56,437 - __main__ - INFO - 
+--- 第 5 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:57,039 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:57,040 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:30:57,041 - __main__ - ERROR - 对话轮次 5 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:57,043 - __main__ - INFO - 
+--- 第 6 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:57,605 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:57,608 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:30:57,608 - __main__ - ERROR - 对话轮次 6 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:57,609 - __main__ - INFO - 
+--- 第 7 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:58,112 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:58,114 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:30:58,115 - __main__ - ERROR - 对话轮次 7 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:58,116 - __main__ - INFO - 
+--- 第 8 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:58,410 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:30:58,686 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:58,688 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:30:58,689 - __main__ - ERROR - 对话轮次 8 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:58,690 - __main__ - INFO - 
+--- 第 9 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:59,185 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:59,186 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:30:59,187 - __main__ - ERROR - 对话轮次 9 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:59,189 - __main__ - INFO - 
+--- 第 10 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:30:59,696 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:30:59,698 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:30:59,698 - __main__ - ERROR - 对话轮次 10 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:30:59,699 - __main__ - INFO - 
+--- 第 11 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:00,276 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:00,277 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望占用您一分钟时间可以吗？
+2026-03-09 22:31:00,278 - __main__ - ERROR - 对话轮次 11 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:00,279 - __main__ - INFO - 
+--- 第 12 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:00,861 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:00,862 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:00,863 - __main__ - ERROR - 对话轮次 12 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:00,864 - __main__ - INFO - 
+--- 第 13 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:01,401 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:01,403 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:01,405 - __main__ - ERROR - 对话轮次 13 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:01,406 - __main__ - INFO - 
+--- 第 14 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:01,972 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:01,973 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:31:01,974 - __main__ - ERROR - 对话轮次 14 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:01,975 - __main__ - INFO - 
+--- 第 15 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:02,517 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:02,518 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:31:02,519 - __main__ - ERROR - 对话轮次 15 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:02,520 - __main__ - INFO - 
+--- 第 16 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:03,021 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:03,023 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:03,024 - __main__ - ERROR - 对话轮次 16 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:03,025 - __main__ - INFO - 
+--- 第 17 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:03,423 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:31:03,545 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:03,547 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:03,547 - __main__ - ERROR - 对话轮次 17 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:03,549 - __main__ - INFO - 
+--- 第 18 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:04,121 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:04,123 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:04,123 - __main__ - ERROR - 对话轮次 18 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:04,124 - __main__ - INFO - 
+--- 第 19 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:04,782 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:04,783 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:31:04,784 - __main__ - ERROR - 对话轮次 19 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:04,786 - __main__ - INFO - 
+--- 第 20 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:05,356 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:05,358 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:05,359 - __main__ - ERROR - 对话轮次 20 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:05,361 - __main__ - INFO - 
+--- 第 21 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:05,939 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:05,941 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:31:05,941 - __main__ - ERROR - 对话轮次 21 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:05,942 - __main__ - INFO - 
+--- 第 22 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:06,536 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:06,538 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:31:06,539 - __main__ - ERROR - 对话轮次 22 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:06,541 - __main__ - INFO - 
+--- 第 23 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:07,112 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:07,114 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:31:07,115 - __main__ - ERROR - 对话轮次 23 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:07,116 - __main__ - INFO - 
+--- 第 24 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:07,709 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:07,711 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:07,712 - __main__ - ERROR - 对话轮次 24 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:07,713 - __main__ - INFO - 
+--- 第 25 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:08,339 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:08,341 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:31:08,342 - __main__ - ERROR - 对话轮次 25 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:08,343 - __main__ - INFO - 
+--- 第 26 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:08,456 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:31:08,899 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:08,902 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:08,903 - __main__ - ERROR - 对话轮次 26 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:08,904 - __main__ - INFO - 
+--- 第 27 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:09,483 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:09,485 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 22:31:09,486 - __main__ - ERROR - 对话轮次 27 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:09,486 - __main__ - INFO - 
+--- 第 28 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:10,051 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:10,053 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:10,053 - __main__ - ERROR - 对话轮次 28 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:10,054 - __main__ - INFO - 
+--- 第 29 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:10,605 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:10,607 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:10,607 - __main__ - ERROR - 对话轮次 29 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:10,608 - __main__ - INFO - 
+--- 第 30 轮对话 (当前状态: CallState.OPENING) ---
+2026-03-09 22:31:11,145 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:11,147 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:31:11,148 - __main__ - ERROR - 对话轮次 30 发生错误: EOF when reading a line
+Traceback (most recent call last):
+  File "D:\PythonProgramming\Aitherpath MLE\car_sales_project\car_sales.py", line 346, in run_call
+    user_input = await asyncio.get_running_loop().run_in_executor(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, input, "[USER]: "
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError: EOF when reading a line
+2026-03-09 22:31:11,148 - __main__ - WARNING - 对话轮次超过限制 (30)，强制结束
+2026-03-09 22:31:11,149 - __main__ - INFO - ==================================================
+2026-03-09 22:31:11,149 - __main__ - INFO - 销售对话结束
+2026-03-09 22:31:11,149 - __main__ - INFO - ==================================================
+2026-03-09 22:31:11,149 - __main__ - INFO - 最终上下文: {
+  "state": "end"
+}
+2026-03-09 22:31:11,149 - __main__ - INFO - 用户画像: {}
+2026-03-09 22:31:11,262 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:33:57,602 - root - INFO - ==================================================
+2026-03-09 22:33:57,602 - root - INFO - 日志系统已启动
+2026-03-09 22:33:57,602 - root - INFO - 日志级别: INFO
+2026-03-09 22:33:57,602 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 22:33:57,602 - root - INFO - ==================================================
+2026-03-09 22:33:57,834 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 22:33:57,834 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 22:33:57,834 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 22:33:57,872 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 22:33:57,904 - __main__ - INFO - [CONFIG] LLM 配置: local 模式
+2026-03-09 22:33:58,377 - __main__ - INFO - ==================================================
+2026-03-09 22:33:58,377 - __main__ - INFO - 销售对话开始
+2026-03-09 22:33:58,377 - __main__ - INFO - ==================================================
+2026-03-09 22:33:58,377 - __main__ - INFO - 初始状态: opening
+2026-03-09 22:33:58,377 - __main__ - INFO - 初始上下文: {"state":"opening"}
+2026-03-09 22:33:58,377 - __main__ - INFO - 
+--- 第 1 轮对话 (当前状态: opening) ---
+2026-03-09 22:33:58,812 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:33:59,951 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:33:59,969 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 22:34:03,605 - __main__ - INFO - 用户输入: 好
+2026-03-09 22:34:04,013 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:34:07,049 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:34:07,052 - __main__ - INFO - 状态转换（规则驱动）: ask_intent
+2026-03-09 22:34:07,053 - __main__ - INFO - 
+--- 第 2 轮对话 (当前状态: ask_intent) ---
+2026-03-09 22:34:07,713 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:34:07,716 - __main__ - INFO - Sales Agent 输出: 您好近期有购车打算吗？我们可以为您介绍一些近期优惠的车型。
+2026-03-09 22:34:09,188 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:34:24,882 - __main__ - INFO - 用户输入: 行
+2026-03-09 22:34:29,008 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:34:29,932 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:34:31,046 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:34:31,049 - __main__ - INFO - 状态转换（LLM 驱动）: ask_brand_budget - 原因: 用户回复表示有意向继续进行购车咨询
+2026-03-09 22:34:31,050 - __main__ - INFO - 
+--- 第 3 轮对话 (当前状态: ask_brand_budget) ---
+2026-03-09 22:34:31,628 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:34:31,628 - __main__ - INFO - Sales Agent 输出: 可以了解一下您的青睐品牌和预算吗？
+2026-03-09 22:34:35,091 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:35:12,473 - __main__ - INFO - 用户输入: 我不喜欢日系车，一直开的德系车，挺喜欢的
+2026-03-09 22:35:16,216 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:35:16,444 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:35:16,444 - __main__ - INFO - 状态转换（规则驱动）: ask_brand_budget
+2026-03-09 22:35:16,444 - __main__ - INFO - 
+--- 第 4 轮对话 (当前状态: ask_brand_budget) ---
+2026-03-09 22:35:17,312 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:35:17,316 - __main__ - INFO - Sales Agent 输出: 可以了解一下您的青睐品牌和预算吗？您比较喜欢哪个品牌的车？预算又是多少呢？
+2026-03-09 22:35:21,343 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:36:03,369 - __main__ - INFO - 用户输入: 奥迪和奔驰把，可以买一辆新的家用。预算50万
+2026-03-09 22:36:07,451 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:36:07,726 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:36:07,729 - __main__ - INFO - 状态转换（规则驱动）: recommend
+2026-03-09 22:36:07,730 - __main__ - INFO - 
+--- 第 5 轮对话 (当前状态: recommend) ---
+2026-03-09 22:36:07,730 - rag.index - INFO - 开始构建向量索引...
+2026-03-09 22:36:07,731 - rag.index - INFO - 开始加载车型数据: .
+2026-03-09 22:36:07,732 - rag.index - ERROR - 加载数据文件失败: [Errno 13] Permission denied: '.'
+2026-03-09 22:36:07,732 - rag.index - ERROR - 构建索引失败: [Errno 13] Permission denied: '.'
+2026-03-09 22:36:07,732 - rag.retriever - ERROR - 检索失败: [Errno 13] Permission denied: '.'
+2026-03-09 22:36:07,734 - rag.retriever - ERROR - 获取车型上下文失败: [Errno 13] Permission denied: '.'
+2026-03-09 22:36:08,951 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:36:08,953 - __main__ - INFO - Sales Agent 输出: 根据您的预算和偏好，比较合适的有奥迪A6L和奔驰E级，都是德系车中的经典之选。您对这两款车型感兴趣吗？
+2026-03-09 22:36:12,641 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:36:22,784 - __main__ - INFO - 用户输入: 不错，你们店什么价格
+2026-03-09 22:36:23,002 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:36:26,745 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:36:28,177 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:36:29,058 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:36:29,060 - __main__ - INFO - 状态转换（LLM 驱动）: schedule_visit - 原因: 用户表示感兴趣，符合进入schedule_visit的条件
+2026-03-09 22:36:29,061 - __main__ - INFO - 
+--- 第 6 轮对话 (当前状态: schedule_visit) ---
+2026-03-09 22:36:30,185 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:36:30,188 - __main__ - INFO - Sales Agent 输出: 很高兴您认可我们的产品，您看下周的周末时间方便吗？我们可以安排一个时间，您来店里面试驾一下喜欢的车型。
+2026-03-09 22:36:33,387 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:37:46,883 - __main__ - INFO - 用户输入: 下周末没空，下下周吧
+2026-03-09 22:37:49,983 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 22:37:51,071 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:37:51,075 - __main__ - INFO - 状态转换（规则驱动）: end
+2026-03-09 22:37:51,075 - __main__ - INFO - ==================================================
+2026-03-09 22:37:51,075 - __main__ - INFO - 销售对话结束
+2026-03-09 22:37:51,077 - __main__ - INFO - ==================================================
+2026-03-09 22:37:51,077 - __main__ - INFO - 最终上下文: {
+  "state": "end",
+  "has_intent": true,
+  "brand": "德系",
+  "budget": "50万",
+  "visit_time": "下下周"
+}
+2026-03-09 22:37:51,077 - __main__ - INFO - 用户画像: {}
+2026-03-09 22:37:51,226 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:03:04,986 - root - INFO - ==================================================
+2026-03-09 23:03:04,986 - root - INFO - 日志系统已启动
+2026-03-09 23:03:04,987 - root - INFO - 日志级别: INFO
+2026-03-09 23:03:04,987 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 23:03:04,987 - root - INFO - ==================================================
+2026-03-09 23:03:05,226 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 23:03:05,228 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 23:03:05,228 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 23:03:05,260 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 23:03:05,281 - __main__ - INFO - [CONFIG] LLM 配置: local 模式
+2026-03-09 23:03:05,729 - __main__ - INFO - ==================================================
+2026-03-09 23:03:05,729 - __main__ - INFO - 销售对话开始
+2026-03-09 23:03:05,730 - __main__ - INFO - ==================================================
+2026-03-09 23:03:05,730 - __main__ - INFO - 初始状态: opening
+2026-03-09 23:03:05,731 - __main__ - INFO - 初始上下文: {"state":"opening"}
+2026-03-09 23:03:05,731 - __main__ - INFO - 
+--- 第 1 轮对话 (当前状态: opening) ---
+2026-03-09 23:03:06,353 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:03:10,976 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:03:11,003 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，占用您一分钟时间可以吗？
+2026-03-09 23:03:11,498 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:03:16,360 - __main__ - INFO - 用户输入: 可以
+2026-03-09 23:03:16,668 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:03:20,686 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:03:20,690 - __main__ - INFO - 状态转换（规则驱动）: ask_intent
+2026-03-09 23:03:20,690 - __main__ - INFO - 
+--- 第 2 轮对话 (当前状态: ask_intent) ---
+2026-03-09 23:03:21,353 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:03:21,356 - __main__ - INFO - Sales Agent 输出: 您好，近期您有购车或者换车的打算吗？
+2026-03-09 23:03:21,807 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:03:24,236 - __main__ - INFO - 用户输入: 有
+2026-03-09 23:03:26,967 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:03:29,639 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:03:32,158 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:03:32,619 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:03:32,622 - __main__ - INFO - 状态转换（LLM 驱动）: ask_brand_budget - 原因: 用户回复有购车意向，符合进入ask_brand_budget环节的条件。
+2026-03-09 23:03:32,622 - __main__ - INFO - 
+--- 第 3 轮对话 (当前状态: ask_brand_budget) ---
+2026-03-09 23:03:33,434 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:03:33,437 - __main__ - INFO - Sales Agent 输出: 可以了解一下您的青睐品牌和预算吗？这样我可以为您推荐一些合适的车型。
+2026-03-09 23:03:37,165 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:03:42,497 - __main__ - INFO - 用户输入: 奥迪，40-50万
+2026-03-09 23:03:47,183 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:03:47,185 - __main__ - INFO - 状态转换（规则驱动）: recommend
+2026-03-09 23:03:47,187 - __main__ - INFO - 
+--- 第 4 轮对话 (当前状态: recommend) ---
+2026-03-09 23:03:47,187 - rag.index - INFO - 开始构建向量索引...
+2026-03-09 23:03:47,188 - rag.index - INFO - 开始加载车型数据: .
+2026-03-09 23:03:47,188 - rag.index - ERROR - 加载数据文件失败: [Errno 13] Permission denied: '.'
+2026-03-09 23:03:47,188 - rag.index - ERROR - 构建索引失败: [Errno 13] Permission denied: '.'
+2026-03-09 23:03:47,188 - rag.retriever - ERROR - 检索失败: [Errno 13] Permission denied: '.'
+2026-03-09 23:03:47,188 - rag.retriever - ERROR - 获取车型上下文失败: [Errno 13] Permission denied: '.'
+2026-03-09 23:03:47,559 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:03:48,571 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:03:48,575 - __main__ - INFO - Sales Agent 输出: 根据您的预算和偏好，比较合适的有奥迪A4L和奥迪Q5L，都是热销的车型，不论是外观内饰还是动力性能都颇为优秀。您会对哪一款更感兴趣呢？
+2026-03-09 23:03:52,732 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:00,207 - root - INFO - ==================================================
+2026-03-09 23:11:00,207 - root - INFO - 日志系统已启动
+2026-03-09 23:11:00,208 - root - INFO - 日志级别: INFO
+2026-03-09 23:11:00,209 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 23:11:00,210 - root - INFO - ==================================================
+2026-03-09 23:11:00,421 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 23:11:00,423 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 23:11:00,423 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 23:11:00,463 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 23:11:00,484 - __main__ - INFO - [CONFIG] LLM 配置: local 模式
+2026-03-09 23:11:00,948 - __main__ - INFO - ==================================================
+2026-03-09 23:11:00,949 - __main__ - INFO - 销售对话开始
+2026-03-09 23:11:00,950 - __main__ - INFO - ==================================================
+2026-03-09 23:11:00,950 - __main__ - INFO - 初始状态: opening
+2026-03-09 23:11:00,950 - __main__ - INFO - 初始上下文: {"state":"opening"}
+2026-03-09 23:11:00,950 - __main__ - INFO - 
+--- 第 1 轮对话 (当前状态: opening) ---
+2026-03-09 23:11:01,574 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:05,890 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:11:05,921 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 23:11:06,699 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:15,024 - __main__ - INFO - 用户输入: 可以
+2026-03-09 23:11:17,065 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:19,194 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:11:19,196 - __main__ - INFO - 状态转换（规则驱动）: ask_intent
+2026-03-09 23:11:19,196 - __main__ - INFO - 
+--- 第 2 轮对话 (当前状态: ask_intent) ---
+2026-03-09 23:11:20,204 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:11:20,206 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，近期本店汽车有很多优惠活动，您近期有购车或者换车的打算吗？
+2026-03-09 23:11:22,231 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:24,022 - __main__ - INFO - 用户输入: 有
+2026-03-09 23:11:27,436 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:28,342 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:11:31,058 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:11:31,058 - __main__ - INFO - 状态转换（LLM 驱动）: ask_brand_budget - 原因: 用户表示有购车意向，按规则应进入ask_brand_budget环节
+2026-03-09 23:11:31,058 - __main__ - INFO - 
+--- 第 3 轮对话 (当前状态: ask_brand_budget) ---
+2026-03-09 23:11:31,875 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:11:31,876 - __main__ - INFO - Sales Agent 输出: 可以了解一下您比较喜欢哪个品牌的车？另外，您的预算大概是多少呢？
+2026-03-09 23:11:32,576 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:40,192 - __main__ - INFO - 用户输入: 奔驰，50万
+2026-03-09 23:11:42,930 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:44,656 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:11:44,656 - __main__ - INFO - 状态转换（规则驱动）: recommend
+2026-03-09 23:11:44,656 - __main__ - INFO - 
+--- 第 4 轮对话 (当前状态: recommend) ---
+2026-03-09 23:11:44,656 - rag.index - INFO - 开始构建向量索引...
+2026-03-09 23:11:44,656 - rag.index - INFO - 开始加载车型数据: D:\PythonProgramming\Aitherpath MLE\car_sales_project\rag\data\car.jsonl
+2026-03-09 23:11:44,656 - rag.index - INFO - 成功加载 64 个车型
+2026-03-09 23:11:45,163 - rag.index - INFO - 📦 使用本地模式: Ollama bge-m3
+2026-03-09 23:11:48,070 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:51,544 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 23:11:51,561 - rag.index - INFO - 索引构建完成：64 个车型，向量维度 1024
+2026-03-09 23:11:51,831 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 23:11:51,831 - rag.retriever - INFO - 检索到 2 个车型，相似度: [0.55983603 0.54948986]
+2026-03-09 23:11:53,204 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:11:58,520 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:11:58,520 - __main__ - INFO - Sales Agent 输出: 根据您的预算和偏好，比较合适的有奇瑞风云A8和吉利帝豪L。奇瑞风云A8续航表现不错，配置丰富，而且价格在10万到14万之间；吉利帝豪L油耗低，维护成本也较低，非常适合家用，而且价格亲民。不知道您对哪种车型更感兴趣呢？
+2026-03-09 23:12:03,493 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:13:08,216 - __main__ - INFO - 用户输入: 我要的是奔驰，预算是50万
+2026-03-09 23:13:10,563 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:13:12,805 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:13:15,776 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:13:16,408 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:13:16,411 - __main__ - INFO - 状态转换（LLM 驱动）: recommend - 原因: 当前状态为recommend，用户信息显示其有明确的购车意图，但未表明对推荐环节的具体反馈，因此保持当前状态。
+2026-03-09 23:13:16,411 - __main__ - INFO - 
+--- 第 5 轮对话 (当前状态: recommend) ---
+2026-03-09 23:13:20,949 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:13:21,640 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 23:13:21,642 - rag.retriever - INFO - 检索到 2 个车型，相似度: [0.55983603 0.54948986]
+2026-03-09 23:13:26,104 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:13:28,436 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:13:28,436 - __main__ - INFO - Sales Agent 输出: 根据您的预算和偏好，比较合适的有奇瑞风云A8和吉利帝豪L。奇瑞风云A8续航表现不错，配置丰富，而且价格在10万到14万之间；吉利帝豪L油耗低，维护成本也较低，非常适合家用，而且价格亲民。我猜您会对这两款车感兴趣。
+2026-03-09 23:13:31,292 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:20:50,301 - root - INFO - ==================================================
+2026-03-09 23:20:50,301 - root - INFO - 日志系统已启动
+2026-03-09 23:20:50,301 - root - INFO - 日志级别: INFO
+2026-03-09 23:20:50,301 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 23:20:50,301 - root - INFO - ==================================================
+2026-03-09 23:20:50,546 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 23:20:50,546 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 23:20:50,546 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 23:20:50,580 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 23:20:50,624 - __main__ - INFO - [CONFIG] LLM 配置: local 模式
+2026-03-09 23:20:51,158 - __main__ - INFO - ==================================================
+2026-03-09 23:20:51,160 - __main__ - INFO - 销售对话开始
+2026-03-09 23:20:51,160 - __main__ - INFO - ==================================================
+2026-03-09 23:20:51,160 - __main__ - INFO - 初始状态: opening
+2026-03-09 23:20:51,160 - __main__ - INFO - 初始上下文: {"state":"opening"}
+2026-03-09 23:20:51,160 - __main__ - INFO - 
+--- 第 1 轮对话 (当前状态: opening) ---
+2026-03-09 23:20:51,787 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:20:56,168 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:20:56,200 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能占用您一点宝贵的时间可以吗？
+2026-03-09 23:20:56,942 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:21:32,080 - __main__ - INFO - 用户输入: 好
+2026-03-09 23:21:33,001 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:21:36,288 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:21:36,290 - __main__ - INFO - 状态转换（规则驱动）: ask_intent
+2026-03-09 23:21:36,290 - __main__ - INFO - 
+--- 第 2 轮对话 (当前状态: ask_intent) ---
+2026-03-09 23:21:36,974 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:21:36,974 - __main__ - INFO - Sales Agent 输出: 您好近期有购车打算吗？这样我可以为您详细介绍我们店内的优惠信息。
+2026-03-09 23:21:38,012 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:21:41,132 - __main__ - INFO - 用户输入: 有
+2026-03-09 23:21:43,214 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:21:45,580 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:21:48,385 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:21:48,531 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:21:48,534 - __main__ - INFO - 状态转换（LLM 驱动）: ask_brand_budget - 原因: 用户回复有购车意向，根据规则应进入ask_brand_budget环节
+2026-03-09 23:21:48,534 - __main__ - INFO - 
+--- 第 3 轮对话 (当前状态: ask_brand_budget) ---
+2026-03-09 23:21:49,324 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:21:49,326 - __main__ - INFO - Sales Agent 输出: 可以了解一下您的青睐品牌和预算吗？这样我可以更好地为您推荐合适的车型。
+2026-03-09 23:21:53,565 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:22:11,993 - __main__ - INFO - 用户输入: 奔驰奔驰，预算50万左右
+2026-03-09 23:22:14,137 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:22:16,632 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:22:16,633 - __main__ - INFO - 状态转换（规则驱动）: recommend
+2026-03-09 23:22:16,636 - __main__ - INFO - 
+--- 第 4 轮对话 (当前状态: recommend) ---
+2026-03-09 23:22:16,638 - rag.index - INFO - 开始构建向量索引...
+2026-03-09 23:22:16,638 - rag.index - INFO - 开始加载车型数据: D:\PythonProgramming\Aitherpath MLE\car_sales_project\rag\data\car.jsonl
+2026-03-09 23:22:16,641 - rag.index - INFO - 成功加载 64 个车型
+2026-03-09 23:22:17,102 - rag.index - INFO - 📦 使用本地模式: Ollama bge-m3
+2026-03-09 23:22:19,332 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:22:24,073 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 23:22:24,088 - rag.index - INFO - 索引构建完成：64 个车型，向量维度 1024
+2026-03-09 23:22:24,342 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 23:22:24,345 - rag.retriever - INFO - 检索到 0 个候选车型，原始相似度: [0.8164993 0.790599  0.7879734 0.7599999]
+2026-03-09 23:22:24,346 - rag.retriever - WARNING - 车型列表为空
+2026-03-09 23:22:24,508 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:22:30,283 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:22:30,286 - __main__ - INFO - Sales Agent 输出: 根据您的预算和偏好，比较合适的有奔驰E级和奔驰C级。我猜您会对这款车型感兴趣，它在内饰和动力方面都有不错的表现。您有兴趣了解一下具体配置和优惠信息吗？
+2026-03-09 23:22:34,856 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:24:16,976 - root - INFO - ==================================================
+2026-03-09 23:24:16,977 - root - INFO - 日志系统已启动
+2026-03-09 23:24:16,977 - root - INFO - 日志级别: INFO
+2026-03-09 23:24:16,978 - root - INFO - 日志文件: D:\PythonProgramming\Aitherpath MLE\car_sales_project\logs\agent.log
+2026-03-09 23:24:16,979 - root - INFO - ==================================================
+2026-03-09 23:24:17,192 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2026-03-09 23:24:17,193 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-03-09 23:24:17,193 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-03-09 23:24:17,226 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-03-09 23:24:17,245 - __main__ - INFO - [CONFIG] LLM 配置: local 模式
+2026-03-09 23:24:17,752 - __main__ - INFO - ==================================================
+2026-03-09 23:24:17,753 - __main__ - INFO - 销售对话开始
+2026-03-09 23:24:17,753 - __main__ - INFO - ==================================================
+2026-03-09 23:24:17,754 - __main__ - INFO - 初始状态: opening
+2026-03-09 23:24:17,754 - __main__ - INFO - 初始上下文: {"state":"opening"}
+2026-03-09 23:24:17,755 - __main__ - INFO - 
+--- 第 1 轮对话 (当前状态: opening) ---
+2026-03-09 23:24:18,368 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:24:19,349 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:24:19,371 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，希望能够占用您一分钟时间，您方便接听吗？
+2026-03-09 23:24:22,167 - __main__ - INFO - 用户输入: 好
+2026-03-09 23:24:23,568 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:24:26,246 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:24:26,246 - __main__ - INFO - 状态转换（规则驱动）: ask_intent
+2026-03-09 23:24:26,246 - __main__ - INFO - 
+--- 第 2 轮对话 (当前状态: ask_intent) ---
+2026-03-09 23:24:27,262 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:24:27,263 - __main__ - INFO - Sales Agent 输出: 您好，我是XX汽车的销售顾问，近期本店汽车有一些优惠活动，您近期有购车或者换车的打算吗？
+2026-03-09 23:24:28,708 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:24:30,312 - __main__ - INFO - 用户输入: 有
+2026-03-09 23:24:33,918 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:24:34,156 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:24:35,900 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:24:35,903 - __main__ - INFO - 状态转换（LLM 驱动）: ask_brand_budget - 原因: 用户明确表达了购车意向
+2026-03-09 23:24:35,903 - __main__ - INFO - 
+--- 第 3 轮对话 (当前状态: ask_brand_budget) ---
+2026-03-09 23:24:36,655 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:24:36,658 - __main__ - INFO - Sales Agent 输出: 可以了解一下您的青睐品牌和预算吗？这样我能更好地为您推荐合适的车型。
+2026-03-09 23:24:39,066 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:24:54,869 - __main__ - INFO - 用户输入: 喜欢德系车，预算大概50万
+2026-03-09 23:24:59,238 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:24:59,243 - __main__ - INFO - 状态转换（规则驱动）: recommend
+2026-03-09 23:24:59,244 - __main__ - INFO - 
+--- 第 4 轮对话 (当前状态: recommend) ---
+2026-03-09 23:24:59,245 - rag.index - INFO - 开始构建向量索引...
+2026-03-09 23:24:59,246 - rag.index - INFO - 开始加载车型数据: D:\PythonProgramming\Aitherpath MLE\car_sales_project\rag\data\car.jsonl
+2026-03-09 23:24:59,248 - rag.index - INFO - 成功加载 64 个车型
+2026-03-09 23:24:59,465 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:24:59,722 - rag.index - INFO - 📦 使用本地模式: Ollama bge-m3
+2026-03-09 23:25:06,618 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 23:25:06,634 - rag.index - INFO - 索引构建完成：64 个车型，向量维度 1024
+2026-03-09 23:25:06,829 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 23:25:06,829 - rag.retriever - INFO - 检索到 1 个候选车型，原始相似度: [0.7262676  0.7244575  0.72098875 0.7194505 ]
+2026-03-09 23:25:09,827 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:25:13,170 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:25:13,170 - __main__ - INFO - Sales Agent 输出: 根据您的预算和偏好，比较合适的有蔚来EC7和奔驰EQE。蔚来EC7具有轿跑造型和年轻化设计，而且支持便捷的换电模式，非常符合您对德系车的喜好。我猜您会对这款车型感兴趣。您对这两款车有了解的意向吗？
+2026-03-09 23:25:14,983 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:26:52,123 - __main__ - INFO - 用户输入: 可以
+2026-03-09 23:26:52,570 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:26:55,727 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:26:57,760 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:26:59,234 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:26:59,235 - __main__ - INFO - 状态转换（LLM 驱动）: recommend - 原因: 用户回复'可以'但提取的信息中没有表示用户感兴趣或不感兴趣，按照规则无法确定下一个状态，因此保持当前状态。
+2026-03-09 23:26:59,235 - __main__ - INFO - 
+--- 第 5 轮对话 (当前状态: recommend) ---
+2026-03-09 23:27:02,956 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:27:04,149 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-09 23:27:04,151 - rag.retriever - INFO - 检索到 1 个候选车型，原始相似度: [0.7262676  0.7244575  0.72098875 0.7194505 ]
+2026-03-09 23:27:08,125 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:27:10,548 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:27:10,551 - __main__ - INFO - Sales Agent 输出: 根据您的预算和偏好，比较合适的有蔚来EC7和奔驰EQE。蔚来EC7拥有轿跑造型和年轻化设计，而且支持便捷的换电模式，非常符合您对德系车的喜好，我猜您会对这款车型感兴趣。您想了解一下详情吗？
+2026-03-09 23:27:13,288 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:27:18,478 - __main__ - INFO - 用户输入: 好
+2026-03-09 23:27:22,450 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:27:23,610 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:27:25,006 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:27:25,009 - __main__ - INFO - 状态转换（LLM 驱动）: schedule_visit - 原因: 用户回复'好'表明有兴趣，根据规则应进入schedule_visit环节
+2026-03-09 23:27:25,010 - __main__ - INFO - 
+--- 第 6 轮对话 (当前状态: schedule_visit) ---
+2026-03-09 23:27:26,417 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:27:26,420 - __main__ - INFO - Sales Agent 输出: 很高兴您对蔚来EC7感兴趣！我们可以根据您的时间安排，安排一个合适的时间去店里详细了解一下这款车。您方便这两天内来店里看车和试驾吗？
+2026-03-09 23:27:28,777 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2026-03-09 23:27:39,715 - __main__ - INFO - 用户输入: 下周六吧
+2026-03-09 23:27:43,624 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 23:27:43,624 - __main__ - INFO - 状态转换（规则驱动）: end
+2026-03-09 23:27:43,624 - __main__ - INFO - ==================================================
+2026-03-09 23:27:43,624 - __main__ - INFO - 销售对话结束
+2026-03-09 23:27:43,624 - __main__ - INFO - ==================================================
+2026-03-09 23:27:43,630 - __main__ - INFO - 最终上下文: {
+  "state": "end",
+  "has_intent": true,
+  "brand": "德系",
+  "budget": "50万",
+  "visit_time": ""
+}
+2026-03-09 23:27:43,630 - __main__ - INFO - 用户画像: {}
+2026-03-09 23:27:43,670 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export

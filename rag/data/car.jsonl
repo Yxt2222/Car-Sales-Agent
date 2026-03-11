@@ -1,0 +1,64 @@
+{"model":"比亚迪宋PLUS DM-i","brand":"比亚迪","price_low":15,"price_high":18,"tags":["混动","省油","家用SUV"],"selling_points":["油耗低，城市通勤成本低","空间大，适合家庭","混动技术成熟"],"target_users":"注重燃油经济性的家庭用户"}
+{"model":"丰田卡罗拉","brand":"丰田","price_low":11,"price_high":15,"tags":["省油耐用","保值率高","紧凑型轿车"],"selling_points":["油耗低，城市通勤成本低","空间实用","品牌口碑好，保值率高"],"target_users":"首次购车的年轻用户"}
+{"model":"特斯拉Model 3","brand":"特斯拉","price_low":23,"price_high":33,"tags":["纯电动","智能驾驶","科技感"],"selling_points":["零油耗，充电成本低","自动驾驶辅助功能强大","OTA在线升级"],"target_users":"科技爱好者，注重智能体验的年轻用户"}
+{"model":"大众朗逸","brand":"大众","price_low":10,"price_high":15,"tags":["德系品质","空间实用","性价比高"],"selling_points":["底盘扎实，驾驶质感好","后排空间宽敞","维修保养成本低"],"target_users":"注重品质和实用性的家庭用户"}
+{"model":"本田雅阁","brand":"本田","price_low":17,"price_high":25,"tags":["混动可靠","空间宽敞","商务家用两用"],"selling_points":["i-MMD混动系统成熟可靠","乘坐舒适，后备箱大","保值率高"],"target_users":"注重舒适和品质的中产家庭"}
+{"model":"奥迪A4L","brand":"奥迪","price_low":32,"price_high":40,"tags":["豪华品牌","商务气质","操控性好"],"selling_points":["quattro四驱系统","内饰精致，用料考究","品牌形象高端"],"target_users":"商务人士，注重品牌形象的成功人士"}
+{"model":"宝马3系","brand":"宝马","price_low":30,"price_high":45,"tags":["运动操控","品牌溢价","驾驶乐趣"],"selling_points":["后驱布局，驾驶体验好","2.0T动力充沛","操控精准"],"target_users":"热爱驾驶的年轻专业人士"}
+{"model":"奔驰C级","brand":"奔驰","price_low":33,"price_high":48,"tags":["豪华舒适","品牌知名度高","内饰精致"],"selling_points":["内饰豪华感强","座椅舒适度高","品牌 prestige 高"],"target_users":"追求豪华体验和社交地位的用户"}
+{"model":"蔚来ET5","brand":"蔚来","price_low":29,"price_high":36,"tags":["纯电动","换电服务","智能豪华"],"selling_points":["换电模式，补能便捷","NOMI智能语音交互","服务体验好"],"target_users":"注重服务体验的新能源用户"}
+{"model":"理想L7","brand":"理想","price_low":32,"price_high":38,"tags":["增程式","家庭SUV","智能座舱"],"selling_points":["无里程焦虑，续航长","空间超大，六座布局","智能座舱体验佳"],"target_users":"有孩家庭，需要大空间的用户"}
+{"model":"小鹏G9","brand":"小鹏","price_low":31,"price_high":47,"tags":["纯电动","智能驾驶","快充技术"],"selling_points":["800V超快充，充电快","XNGP智能驾驶能力强","底盘质感好"],"target_users":"科技爱好者，长途出行需求"}
+{"model":"吉利星越L","brand":"吉利","price_low":13,"price_high":18,"tags":["性价比高","配置丰富","中国品牌"],"selling_points":["动力强劲，配置豪华","空间大，家用合适","价格亲民"],"target_users":"注重性价比的务实用户"}
+{"model":"比亚迪秦PLUS DM-i","brand":"比亚迪","price_low":10,"price_high":14,"tags":["混动","省油","紧凑型轿车"],"selling_points":["超低油耗，城市通勤仅需3-4L/100km","轴距长，空间越级","刀片电池安全可靠"],"target_users":"注重燃油经济性的城市通勤族"}
+{"model":"比亚迪汉DM-i","brand":"比亚迪","price_low":17,"price_high":24,"tags":["混动旗舰","豪华舒适","安全可靠"],"selling_points":["刀片电池，安全性能行业领先","内饰豪华，用料考究","综合续航超1000km"],"target_users":"追求品质和安全的中产家庭"}
+{"model":"比亚迪元PLUS","brand":"比亚迪","price_low":13,"price_high":16,"tags":["纯电动","小型SUV","城市代步"],"selling_points":["续航450km，城市通勤足够","配置丰富，性价比高","车身小巧，停车方便"],"target_users":"城市代步族，女性用户"}
+{"model":"丰田凯美瑞","brand":"丰田","price_low":18,"price_high":25,"tags":["混动中型车","家用舒适","保值率高"],"selling_points":["THS混动系统成熟可靠","行驶质感扎实","后排空间宽敞舒适"],"target_users":"注重舒适和可靠性的家庭用户"}
+{"model":"丰田汉兰达","brand":"丰田","price_low":26,"price_high":35,"tags":["7座SUV","家用大空间","保值率高"],"selling_points":["7座布局，大家庭首选","2.5L动力充沛","品牌口碑好，保值率极高"],"target_users":"多人口家庭，需要大空间"}
+{"model":"本田CR-V","brand":"本田","price_low":18,"price_high":26,"tags":["紧凑型SUV","空间魔术师","油耗低"],"selling_points":["后排魔术座椅，空间灵活多变","i-MMD混动省油","操控灵活，城市好开"],"target_users":"注重实用性和灵活空间的用户"}
+{"model":"本田思域","brand":"本田","price_low":12,"price_high":17,"tags":["运动型轿车","省油耐用","改装潜力大"],"selling_points":["1.5T地球梦发动机动力充沛","操控灵活","改装文化丰富，年轻化"],"target_users":"追求运动感和个性化的年轻人"}
+{"model":"本田奥德赛","brand":"本田","price_low":23,"price_high":29,"tags":["MPV","家用大空间","魔术座椅"],"selling_points":["魔术座椅，空间布局灵活多变","i-MMD混动省油","侧滑门，上下车方便"],"target_users":"有孩家庭，需要多人出行的用户"}
+{"model":"大众帕萨特","brand":"大众","price_low":18,"price_high":25,"tags":["德系B级车","商务家用","质感扎实"],"selling_points":["行驶质感德系水准","内饰用料扎实","空间宽敞，商务家用两用"],"target_users":"商务人士及注重品质的家庭"}
+{"model":"大众途观L","brand":"大众","price_low":22,"price_high":28,"tags":["中型SUV","空间宽敞","德系品质"],"selling_points":["轴距加长，后排空间宽裕","2.0T动力充沛","行驶质感扎实"],"target_users":"注重空间和德系品质的用户"}
+{"model":"大众ID.4 CROZZ","brand":"大众","price_low":20,"price_high":29,"tags":["纯电动","MEB平台","德系品质"],"selling_points":["MEB纯电平台，安全可靠","续航超500km","驾驶质感接近燃油车"],"target_users":"想要德系品质的电动车用户"}
+{"model":"奥迪A6L","brand":"奥迪","price_low":42,"price_high":55,"tags":["豪华商务","品牌形象","行政级别"],"selling_points":["quattro四驱系统","内饰豪华，科技感强","商务行政用车首选"],"target_users":"企业高管、商务人士"}
+{"model":"奥迪Q5L","brand":"奥迪","price_low":39,"price_high":52,"tags":["豪华SUV","quattro四驱","品质可靠"],"selling_points":["quattro智能四驱系统","空间宽敞舒适","豪华SUV性价比高"],"target_users":"追求豪华SUV的家庭用户"}
+{"model":"宝马5系","brand":"宝马","price_low":42,"price_high":60,"tags":["豪华行政","驾驶乐趣","品牌形象"],"selling_points":["操控精准，驾驶质感一流","内饰豪华用料考究","商务行政用车代表"],"target_users":"企业高管、注重驾驶乐趣的用户"}
+{"model":"宝马X3","brand":"宝马","price_low":38,"price_high":50,"tags":["豪华运动SUV","操控性好","xDrive四驱"],"selling_points":["xDrive智能四驱系统","操控精准如同轿车","品牌形象高端"],"target_users":"追求运动豪华SUV的用户"}
+{"model":"宝马i3","brand":"宝马","price_low":35,"price_high":45,"tags":["纯电动","运动基因","豪华感"],"selling_points":["CLAR纯电平台，操控出色","续航超600km","豪华内饰，品牌加持"],"target_users":"想要豪华电动车的用户"}
+{"model":"奔驰E级","brand":"奔驰","price_low":45,"price_high":58,"tags":["豪华商务","品牌声望","内饰豪华"],"selling_points":["内饰豪华感同级标杆","后排乘坐舒适","商务行政用车代表"],"target_users":"企业高管、注重品牌声望的用户"}
+{"model":"奔驰GLC","brand":"奔驰","price_low":42,"price_high":53,"tags":["豪华SUV","舒适度高","品牌形象"],"selling_points":["内饰豪华，乘坐舒适","空间宽敞","品牌SUV代表车型"],"target_users":"追求豪华舒适SUV的用户"}
+{"model":"奔驰EQE","brand":"奔驰","price_low":48,"price_high":62,"tags":["纯电动","豪华感","科技配置"],"selling_points":["EVA纯电平台，安全可靠","续航超700km","内饰豪华用料考究"],"target_users":"追求豪华电动车的商务人士"}
+{"model":"蔚来ES6","brand":"蔚来","price_low":36,"price_high":46,"tags":["纯电动","换电服务","智能SUV"],"selling_points":["换电模式，3分钟补能","NOMI智能语音交互","BaaS电池租用方案灵活"],"target_users":"注重服务体验的新能源用户"}
+{"model":"蔚来ES8","brand":"蔚来","price_low":48,"price_high":65,"tags":["纯电动","6座豪华","换电服务"],"selling_points":["6座布局，高端MPV级舒适","换电3分钟补能","全铝车身，安全可靠"],"target_users":"高端家庭用户，追求服务体验"}
+{"model":"蔚来EC7","brand":"蔚来","price_low":45,"price_high":55,"tags":["纯电动","轿跑设计","智能豪华"],"selling_points":["轿跑造型，年轻化设计","换电模式补能便捷","X-Bar智能座舱"],"target_users":"追求时尚豪华电动车的年轻人"}
+{"model":"理想L8","brand":"理想","price_low":35,"price_high":42,"tags":["增程式","6座SUV","家庭首选"],"selling_points":["无里程焦虑，综合续航1300km","6座布局，二排独立座椅","智能座舱体验佳"],"target_users":"二胎家庭，需要6座大空间"}
+{"model":"理想L9","brand":"理想","price_low":42,"price_high":50,"tags":["增程旗舰","6座豪华","智能座舱"],"selling_points":["全尺寸6座SUV，旗舰级别","智能座舱同价位领先","零百加速5.3秒快感"],"target_users":"高端家庭用户，追求豪华体验"}
+{"model":"小鹏P7","brand":"小鹏","price_low":23,"price_high":28,"tags":["纯电动轿跑","智能驾驶","运动造型"],"selling_points":["轿跑造型，颜值在线","NGP智能驾驶能力","续航超700km"],"target_users":"追求时尚智能电动车的年轻人"}
+{"model":"小鹏G6","brand":"小鹏","price_low":21,"price_high":27,"tags":["纯电动SUV","智能驾驶","快充技术"],"selling_points":["800V超快充，15分钟充电300km","XNGP智能驾驶","性价比超高"],"target_users":"科技爱好者，注重性价比"}
+{"model":"小鹏X9","brand":"小鹏","price_low":36,"price_high":48,"tags":["纯电动MPV","智能座舱","豪华舒适"],"selling_points":["MPV空间魔术师，布局灵活","XNGP智能驾驶","800V超快充"],"target_users":"高端家庭用户，需要MPV大空间"}
+{"model":"吉利博越L","brand":"吉利","price_low":12,"price_high":16,"tags":["性价比SUV","配置丰富","空间实用"],"selling_points":["动力强劲，操控性好","配置同价位最丰富","空间宽敞，家用合适"],"target_users":"预算有限但想要配置高的用户"}
+{"model":"吉利帝豪L","brand":"吉利","price_low":8,"price_high":11,"tags":["紧凑型轿车","性价比高","省油耐用"],"selling_points":["油耗低，维护成本低","空间够用，家用合适","价格亲民，入门首选"],"target_users":"首次购车的年轻用户"}
+{"model":"吉利银河L7","brand":"吉利","price_low":12,"price_high":16,"tags":["混动SUV","省油动力强","科技感"],"selling_points":["雷神混动系统，动力强且省油","银河OS智能座舱","造型科技感强"],"target_users":"年轻用户，注重科技感"}
+{"model":"领克01","brand":"领克","price_low":17,"price_high":22,"tags":["潮流设计","安全性高","欧洲品质"],"selling_points":["沃尔沃CMA平台，安全性能高","内饰用料豪华，设计年轻化","操控质感欧洲水准"],"target_users":"年轻化、注重品质的用户"}
+{"model":"领克08","brand":"领克","price_low":16,"price_high":21,"tags":["混动SUV","潮流设计","科技配置"],"selling_points":["EMP混动系统，动力强且省油","车机系统流畅智能","造型潮流，年轻化"],"target_users":"年轻用户，注重科技体验"}
+{"model":"领克09","brand":"领克","price_low":26,"price_high":35,"tags":["豪华SUV","空间宽敞","品质可靠"],"selling_points":["SPA平台，与沃尔沃共享技术","内饰豪华用料考究","空间宽敞舒适"],"target_users":"追求豪华SUV品质的用户"}
+{"model":"长城坦克300","brand":"长城","price_low":20,"price_high":26,"tags":["硬派越野","复古造型","越野能力强"],"selling_points":["非承载式车身，越野能力强","复古造型，个性鲜明","2.0T动力充沛"],"target_users":"越野爱好者，追求个性"}
+{"model":"长城坦克500","brand":"长城","price_low":35,"price_high":50,"tags":["豪华越野","硬派风格","豪华配置"],"selling_points":["3.0T V6动力，越野利器","内饰豪华用料考究","非承载式车身可靠性高"],"target_users":"越野爱好者，追求豪华体验"}
+{"model":"长城摩卡DHT-PHEV","brand":"长城","price_low":29,"price_high":36,"tags":["混动SUV","豪华舒适","省油"],"selling_points":["DHT混动系统，综合续航超1000km","内饰豪华用料考究","行驶质感舒适"],"target_users":"注重豪华舒适的家庭用户"}
+{"model":"哈弗H6","brand":"哈弗","price_low":10,"price_high":15,"tags":["性价比SUV","销量冠军","空间实用"],"selling_points":["中国SUV销量冠军","空间大，配置丰富","价格亲民"],"target_users":"注重性价比的家庭用户"}
+{"model":"哈弗大狗","brand":"哈弗","price_low":12,"price_high":16,"tags":["轻越野","复古造型","个性化"],"selling_points":["复古造型，个性鲜明","轻度越野能力强","性价比高"],"target_users":"追求个性、轻度越野的年轻人"}
+{"model":"奇瑞瑞虎8 PRO","brand":"奇瑞","price_low":12,"price_high":16,"tags":["性价比SUV","动力强劲","空间宽敞"],"selling_points":["2.0T动力充沛","空间大，家用合适","价格亲民"],"target_users":"注重动力和空间的务实用户"}
+{"model":"奇瑞风云A8","brand":"奇瑞","price_low":10,"price_high":14,"tags":["纯电动","续航长","性价比高"],"selling_points":["续航超500km，城市通勤足够","配置丰富，性价比高","造型时尚"],"target_users":"城市通勤族，注重性价比"}
+{"model":"长安CS75 PLUS","brand":"长安","price_low":12,"price_high":17,"tags":["紧凑型SUV","配置丰富","造型时尚"],"selling_points":["动力强劲，操控性好","配置丰富，科技感强","造型年轻时尚"],"target_users":"年轻用户，注重科技感"}
+{"model":"长安UNI-V","brand":"长安","price_low":11,"price_high":15,"tags":["运动型轿车","造型科幻","科技感"],"selling_points":["造型科幻，颜值在线","蓝鲸动力，油耗低","内饰科技感强"],"target_users":"年轻人，追求时尚科技"}
+{"model":"长安深蓝SL03","brand":"长安","price_low":17,"price_high":23,"tags":["纯电动轿跑","科技感","快充能力"],"selling_points":["轿跑造型，颜值在线","705km续航，快充15分钟200km","座舱科技感强"],"target_users":"年轻人，追求时尚电动"}
+{"model":"长安深蓝S7","brand":"长安","price_low":15,"price_high":20,"tags":["纯电动SUV","续航长","快充技术"],"selling_points":["续航超600km，长途无忧","增程版无里程焦虑","造型科技感强"],"target_users":"科技爱好者，长途出行需求"}
+{"model":"红旗H9","brand":"红旗","price_low":30,"price_high":50,"tags":["豪华品牌","自主高端","商务气质"],"selling_points":["国产品牌，声望独特","内饰豪华用料考究","商务行政用车有面子"],"target_users":"商务人士，注重国产品牌声望"}
+{"model":"红旗E-HS9","brand":"红旗","price_low":50,"price_high":70,"tags":["纯电动豪华","旗舰级别","品牌声望"],"selling_points":["国产品牌旗舰SUV","内饰豪华用料考究","续航超600km"],"target_users":"高端商务人士，注重国产品牌"}
+{"model":"特斯拉Model Y","brand":"特斯拉","price_low":26,"price_high":36,"tags":["纯电动","空间大","智能驾驶"],"selling_points":["纯电平台，续航超600km","空间实用性同级领先","自动驾驶辅助功能强大"],"target_users":"家庭用户，注重空间和智能体验"}
+{"model":"特斯拉Model S","brand":"特斯拉","price_low":68,"price_high":82,"tags":["纯电动旗舰","高性能","科技领先"],"selling_points":["零百加速2.1秒超跑级别","续航超700km","自动驾驶能力领先"],"target_users":"科技发烧友，高性能需求用户"}
+{"model":"腾势D9","brand":"腾势","price_low":34,"price_high":46,"tags":["纯电动MPV","豪华舒适","大空间"],"selling_points":["6座MPV空间布局豪华","续航超600km","比亚迪技术，品质可靠"],"target_users":"高端家庭用户，需要MPV"}
+{"model":"岚图FREE","brand":"岚图","price_low":32,"price_high":40,"tags":["增程式SUV","豪华舒适","省油"],"selling_points":["增程模式无里程焦虑","内饰豪华用料考究","行驶质感舒适"],"target_users":"注重豪华舒适的家庭用户"}
+{"model":"飞凡R7","brand":"飞凡","price_low":19,"price_high":26,"tags":["纯电动SUV","空间宽敞","智能配置"],"selling_points":["后排空间超宽敞","配置丰富智能","续航超600km"],"target_users":"注重空间和智能体验的用户"}
+{"model":"昊铂GT","brand":"昊铂","price_low":22,"price_high":29,"tags":["纯电动轿跑","运动造型","快充技术"],"selling_points":["轿跑造型，颜值在线","800V超快充","操控精准"],"target_users":"追求运动电动车的年轻人"}
