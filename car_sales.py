@@ -123,7 +123,9 @@ def merge_extracted_info(ctx: CallContext, extracted: ExtractedInfo) -> CallCont
     """
     合并提取的客户信息到上下文
 
-    规则：已有值不覆盖（避免用户误改之前的确认信息）
+    更新规则：
+    - 品牌和预算：总是更新（用户可能改变想法）
+    - 其他字段（如意向、兴趣等）：保持已确认值
 
     Args:
         ctx: 当前对话上下文
@@ -140,9 +142,21 @@ def merge_extracted_info(ctx: CallContext, extracted: ExtractedInfo) -> CallCont
             continue
         old_value = getattr(ctx, field, None)
 
-        # 只有当旧值为空时才更新
-        if old_value is None:
-            updates[field] = new_value
+        # 品牌和预算总是更新（用户可能改变想法）
+        if field in ['brand', 'budget']:
+            if old_value != new_value and new_value:  # 只在值不同时更新
+                updates[field] = new_value
+        elif field in ['concerns']:
+            # 顾虑字段：如果有新顾虑，追加到已有顾虑中
+            if old_value:
+                if new_value not in old_value and new_value:
+                    updates[field] = old_value + "; " + new_value
+            else:
+                updates[field] = new_value
+        else:
+            # 其他字段：只有当旧值为空时才更新
+            if old_value is None and new_value:
+                updates[field] = new_value
 
     return ctx.model_copy(update=updates)
 
@@ -373,15 +387,15 @@ async def run_call():
             # 关键修复：规则优先，LLM fallback
             rule_state = rule_based_next_state(ctx, extracted)
 
-            if rule_state is not None:
-                # 规则可以决定，使用规则
-                ctx.state = rule_state
-                logger.info(f"状态转换（规则驱动）: {ctx.state}")
-            else:
+            if rule_state is None:
                 # 规则无法决定，使用 LLM
                 decision = await Runner.run(state_judge_agent, decision_prompt)
                 ctx.state = decision.final_output.next_state
                 logger.info(f"状态转换（LLM 驱动）: {ctx.state} - 原因: {decision.final_output.reason}")
+            else:
+                # 规则可以决定，使用规则
+                ctx.state = rule_state
+                logger.info(f"状态转换（规则驱动）: {ctx.state}")
 
             print(f"📍 当前状态: {ctx.state.value}")
 

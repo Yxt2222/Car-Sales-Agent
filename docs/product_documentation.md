@@ -44,7 +44,7 @@ END（结束）
 
 - **Python 3.8+**：核心开发语言
 - **OpenAI Agents SDK**：Agent 框架，管理 LLM 交互
-- **FAISS**：向量检索，支持 RAG（Retrieval-Augmented Generation）
+- **SQLite**：结构化数据库，支持 SQL 查询检索
 - **Pydantic**：数据验证和类型安全
 - **OpenAI API**：统一的 LLM 接口（兼容本地和云端）
 
@@ -79,7 +79,7 @@ END（结束）
 │ Memory Summarizer  │   │                     │
 │   Agent         │   │                     │
 └─────────────────────┘   │                     │
-                              │                     │
+                              │
         ┌─────────────────────┼─────────────────────┐
         │                     │                     │
 ┌──────▼──────┐    ┌─────────▼────────┐   ┌────────▼────────┐
@@ -135,7 +135,7 @@ END（结束）
 │  - 职业、性格、偏好  │   │                     │
 │  - 决策倾向       │   │                     │
 └─────────────────────┘   │                     │
-                              │                     │
+                              │
                     触发阈值 > 5 轮 → Memory Summarizer Agent
 ```
 
@@ -157,7 +157,7 @@ END（结束）
 ```python
 while ctx.state != CallState.END:
     # 1. 触发记忆总结
-    await conversation.trigger_memory_sumarization()
+    await conversation.trigger_memory_summarization()
 
     # 2. 生成销售话术
     prompt = render_prompt(ctx, conversation, rag_context)
@@ -189,7 +189,7 @@ class ConversationHistory:
         self.user_profile = UserProfile()     # 用户画像
         self.memory_threshold = memory_threshold
 
-    async def trigger_memory_sumarization(self):
+    async def trigger_memory_summarization(self):
         if len(self.short_term_history) > self.memory_threshold:
             # 调用 Memory Summarizer Agent
             result = await Runner.run(self.memory_agent, prompt)
@@ -198,31 +198,58 @@ class ConversationHistory:
 
 ### 3.3 RAG 检索系统：rag/
 
-**功能**：基于向量相似度检索相关车型信息
+**功能**：基于 SQL 结构化查询检索相关车型信息
 
 **技术要点**：
-1. **懒加载模式**：索引和嵌入模型在首次使用时才构建
-2. **余弦相似度**：使用 FAISS IndexFlatIP 实现内积检索
-3. **双模式支持**：兼容本地 Ollama 和云端 API（OpenAI/通义/智谱等）
-4. **文本归一化**：将车型对象转换为结构化文本描述
+1. **SQLite 存储**：使用本地 SQLite 数据库存储车型数据
+2. **懒加载模式**：数据库在首次使用时才初始化
+3. **结构化查询**：支持品牌、价格、标签等多条件组合查询
+4. **智能排序**：基于品牌匹配、价格接近度和标签匹配进行排序
 
 **关键代码段**：
 ```python
-def build_index(data_path, model_name):
-    # 1. 加载数据
-    car_profiles = load_car_profiles(data_path)
+# 数据库初始化
+def init_database(jsonl_path: Optional[Path] = None):
+    db = CarDatabase()
+    db.init_tables()
+    db.load_from_jsonl(jsonl_path)
 
-    # 2. 生成向量
-    embed_model = EmbeddingClient(model=model_name)
-    embeddings = embed_model.embed(documents)
+# 组合查询
+def search_combined(
+    brand: Optional[str] = None,
+    min_price: Optional[float] = None,
+    max_price: Optional[float] = None,
+    tags: Optional[List[str]] = None,
+    limit: int = 10
+) -> List[CarProfile]:
+    # 构建 SQL WHERE 条件
+    query = "SELECT * FROM cars WHERE 1=1"
+    params = []
 
-    # 3. 归一化（余弦相似度）
-    emb = normalize_embeddings(emb)
+    if brand:
+        query += " AND brand LIKE ?"
+        params.append(f"%{brand}%")
 
-    # 4. 构建 FAISS 索引
-    faiss_index = faiss.IndexFlatIP(emb.shape[1])
-    faiss_index.add(emb)
+    if min_price and max_price:
+        query += " AND price_low <= ? AND price_high >= ?"
+        params.extend([max_price, min_price])
+
+    # 执行查询
+    cursor.execute(query, params)
 ```
+
+**数据库表结构**：
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| id | INTEGER | 主键（自增）|
+| model | TEXT | 车型名称 |
+| brand | TEXT | 品牌 |
+| price_low | REAL | 最低价格（万）|
+| price_high | REAL | 最高价格（万）|
+| tags | TEXT | 标签（JSON 数组）|
+| selling_points | TEXT | 核心卖点（JSON 数组）|
+| target_users | TEXT | 目标用户描述 |
 
 ### 3.4 配置管理模块：config.py
 
@@ -288,8 +315,8 @@ def determine_next_state(ctx, extracted):
 ### 4.2 技术实现优点
 
 1. **双模式支持**：本地 Ollama + 云端 API，适应不同环境
-2. **懒加载优化**：索引和 Agent 按需初始化，减少启动时间
-3. **向量检索**：FAISS 实现高效相似度计算，支持大规模数据
+2. **懒加载优化**：数据库和 Agent 按需初始化，减少启动时间
+3. **SQL 检索**：结构化查询，精确匹配，结果可控
 4. **类型安全**：Pydantic 提供运行时类型检查，减少 Bug
 
 ### 4.3 开发体验优点
@@ -312,7 +339,7 @@ def determine_next_state(ctx, extracted):
 ### 5.2 技术实现层面
 
 1. **Token 估算不准**：简单字符数 × 1.5，与实际 token 数量偏差大
-2. **向量维度固定**：不同嵌入模型维度不同，需要重建索引
+2. **数据库固定**：表结构变更需要重建数据库
 3. **并发能力弱**：同步等待 Agent 响应，无法并行处理
 4. **错误处理粗糙**：部分异常只记录日志，不尝试恢复
 
@@ -346,9 +373,9 @@ def determine_next_state(ctx, extracted):
    - 使用 tiktoken 精确计算 token 数量
    - 跨模型 token 计算（支持不同 LLM）
 
-2. **向量动态索引**：
-   - 支持在线向量追加（无需重建整个索引）
-   - 实现向量版本管理
+2. **数据库动态更新**：
+   - 支持在线车型追加（无需重建整个数据库）
+   - 实现数据版本管理
 
 3. **并发处理**：
    - Agent 调用异步化
@@ -423,7 +450,8 @@ car_sales_project/
 │
 ├── rag/                      # RAG 检索模块
 │   ├── schema.py            # 数据模型定义
-│   ├── index.py             # 向量索引构建
+│   ├── index.py             # 数据访问接口
+│   ├── database.py          # SQLite 数据库
 │   ├── retriever.py         # 检索器
 │   └── data/
 │       └── car.jsonl       # 车型数据库（64条）
@@ -439,6 +467,7 @@ car_sales_project/
 ├── logs/                     # 日志目录
 │   └── agent.log          # 程序日志
 │
+├── car_sales.db              # SQLite 数据库
 ├── requirements.txt           # 依赖包
 └── README.md                # 项目说明
 ```
@@ -494,7 +523,6 @@ class CarProfile(BaseModel):
 # 本地模式配置
 class LocalOllamaConfig:
     CHAT_MODEL = "qwen2.5:7b"
-    EMBEDDING_MODEL = "bge-m3"
     BASE_URL = "http://localhost:11434/v1"
     API_KEY = "ollama"
 
@@ -502,7 +530,6 @@ class LocalOllamaConfig:
 class CloudAPIConfig:
     PROVIDER = "openai"  # openai, qwen, zhipu, baidu
     CHAT_MODEL = "gpt-4"
-    EMBEDDING_MODEL = "text-embedding-3-small"
     BASE_URL = "https://api.openai.com/v1"
     API_KEY = "sk-..."
 ```
@@ -511,6 +538,8 @@ class CloudAPIConfig:
 
 ## 更新日志
 
+- **2026-03-14**：RAG 检索改用 SQL 结构化查询（替代 FAISS 向量检索）
+- **2026-03-14**：新增 SQLite 数据库模块 (database.py)
 - **2026-03-09**：扩展车型数据库至 64 条
 - **2026-03-09**：实现三层记忆系统（短期/长期/用户画像）
 - **2026-03-09**：添加云端 API 支持（OpenAI/通义/智谱/百度）

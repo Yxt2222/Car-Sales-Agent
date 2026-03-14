@@ -62,3 +62,6 @@
 {"model":"岚图FREE","brand":"岚图","price_low":32,"price_high":40,"tags":["增程式SUV","豪华舒适","省油"],"selling_points":["增程模式无里程焦虑","内饰豪华用料考究","行驶质感舒适"],"target_users":"注重豪华舒适的家庭用户"}
 {"model":"飞凡R7","brand":"飞凡","price_low":19,"price_high":26,"tags":["纯电动SUV","空间宽敞","智能配置"],"selling_points":["后排空间超宽敞","配置丰富智能","续航超600km"],"target_users":"注重空间和智能体验的用户"}
 {"model":"昊铂GT","brand":"昊铂","price_low":22,"price_high":29,"tags":["纯电动轿跑","运动造型","快充技术"],"selling_points":["轿跑造型，颜值在线","800V超快充","操控精准"],"target_users":"追求运动电动车的年轻人"}
+{"model":"XC60","brand":"沃尔沃","price_low":35,"price_high":45,"tags":["豪华SUV","安全性高","欧洲品质"],"selling_points":["沃尔沃品牌，安全性能高","内饰用料豪华，设计年轻化","操控质感欧洲水准"],"target_users":"年轻化、注重品质的用户"}
+{"model":"XC90","brand":"沃尔沃","price_low":50,"price_high":70,"tags":["豪华SUV","安全性高","空间宽敞"],"selling_points":["沃尔沃品牌，安全性能高","内饰用料豪华，设计年轻化","空间宽敞舒适"],"target_users":"追求豪华SUV品质的用户"}
+{"model":"S90","brand":"沃尔沃","price_low":40,"price_high":55,"tags":["豪华轿车","安全性高","欧洲品质"],"selling_points":["沃尔沃品牌，安全性能高","内饰用料豪华，设计年轻化","行驶质感欧洲水准"],"target_users":"年轻化、注重品质的用户"}

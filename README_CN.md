@@ -1,8 +1,8 @@
-# 汽车销售 Agent  
+# 汽车销售 Agent
 
-这是一个基于有限状态机（FSM）的汽车销售对话系统，尚未达到生产级,可用于 AI 安全课题实践，测试 LLM 攻击方法（Jailbreak、Prompt Injection 等）。
+这是一个基于有限状态机（FSM）的汽车销售对话系统，尚未达到生产级，可用于 AI 安全课题实践，测试 LLM 攻击方法（Jailbreak、Prompt Injection 等）。
 
-**支持本地和云端两种部署模式**
+**支持本地和云端两种部署模式，无需 GPU**
 
 ## 📁 项目结构
 
@@ -15,8 +15,9 @@ car_sales_project/
 │
 ├── rag/                       # RAG 检索模块
 │   ├── schema.py             # 数据模型定义
-│   ├── index.py              # 向量索引构建（懒加载）
-│   ├── retriever.py          # 检索器
+│   ├── index.py              # 数据访问接口（懒加载）
+│   ├── database.py           # SQLite 数据库（结构化存储）
+│   ├── retriever.py          # 结构化检索器（基于 SQL）
 │   └── data/
 │       └── car.jsonl         # 车型数据库（64条）
 │
@@ -31,27 +32,27 @@ car_sales_project/
 │   ├── agent_workflow.md     # 工作流程说明
 │   └── product_documentation.md  # 产品文档
 │
+├── car_sales.db              # SQLite 数据库（自动生成）
 └── logs/                     # 日志目录（自动创建）
     └── agent.log
 ```
 
 ## 🚀 快速开始
 
-### 方式一：本地模式（需要 GPU）
+### 方式一：本地模式（无需 GPU）
 
 ```bash
 # 1. 安装依赖
 pip install -r requirements.txt
 
 # 2. 修改 config.py，确保 MODEL_MODE = "LOCAL"
-MODEL_MODE = "LOCAL"  # 在 config.py 第 11 行
+MODEL_MODE = "LOCAL"  # 在 config.py 第 15 行
 
 # 3. 启动 Ollama 服务
 ollama serve
 
 # 4. 拉取所需模型
 ollama pull qwen2.5:7b
-ollama pull bge-m3
 
 # 5. 运行程序
 python car_sales.py
@@ -64,7 +65,7 @@ python car_sales.py
 pip install -r requirements.txt
 
 # 2. 修改 config.py，切换到云端模式
-MODEL_MODE = "CLOUD"  # 在 config.py 第 11 行
+MODEL_MODE = "CLOUD"  # 在 config.py 第 15 行
 
 # 3. 配置云端 API Key
 ```
@@ -147,7 +148,6 @@ class CloudAPIConfig:
 # ==================== 本地 Ollama 配置 ====================
 class LocalOllamaConfig:
     CHAT_MODEL = "qwen2.5:7b"
-    EMBEDDING_MODEL = "bge-m3"
     # ...
 ```
 
@@ -341,8 +341,6 @@ MEMORY SYSTEM:
 ```
 openai-agents>=0.11.0
 pydantic>=2.0.0
-faiss-cpu>=1.7.0
-numpy>=1.24.0
 ```
 
 ## 📚 文档
