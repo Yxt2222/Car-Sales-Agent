@@ -87,7 +87,7 @@ class LocalOllamaConfig:
     CHAT_MODEL = "qwen2.5:7b"
 
     # 生成参数
-    TEMPERATURE = 0.7
+    TEMPERATURE = 0.0
     MAX_TOKENS = 512
 
 

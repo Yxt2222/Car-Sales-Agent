@@ -1,7 +1,7 @@
 """
 LLM-based Prompt Injection Detection Module
 
-在 extract_agent 调用前，对用户输入进行 prompt injection 检测和清理。
+LLM过滤器，在 extract_agent 调用前，对用户输入进行 prompt injection 检测和清理。
 """
 
 from typing import Optional
